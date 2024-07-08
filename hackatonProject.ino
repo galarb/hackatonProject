@@ -8,6 +8,7 @@
 #define in2 5
 #define enA 3
 #define sensorPin 6
+#define mp3 8
 
 clicli mycli;  
 LiquidCrystal_I2C lcd(0x27,16,2);  
@@ -45,6 +46,7 @@ void check(){
     message();
     neo(0,255,0);
     lcd.setCursor(0, 0);
+    digitalWrite(mp3, HIGH);
 
     lcd.print("have a blessed day");
     lcd.setCursor(1, 1);
@@ -58,6 +60,7 @@ void check(){
     lcd.print("WELCOME!");
     lcd.setCursor(3, 1);
     lcd.print("PUT YOUR CUP");
+    digitalWrite(mp3, LOW);
 
     neorun();
   }
@@ -94,5 +97,5 @@ void neorun(){
     pixels.setPixelColor(i+1, pixels.Color(0, 0, 0));
     pixels.show();   // Send the updated pixel colors to the hardware.
     delay(100); // Pause before next pass through loop
- }
+ };
 }
