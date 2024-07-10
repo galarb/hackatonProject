@@ -88,6 +88,8 @@ void neorun(){
     pixels.setPixelColor(i, pixels.Color(0 ,0, 255));
     pixels.setPixelColor(i, pixels.Color(255 ,0, 255));
 
+
+
     pixels.setPixelColor(i-1, pixels.Color(0, 0, 0));
     pixels.show();   // Send the updated pixel colors to the hardware.
     delay(100); // Pause before next pass through loop
